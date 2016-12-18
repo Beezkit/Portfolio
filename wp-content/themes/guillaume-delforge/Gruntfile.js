@@ -6,7 +6,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
     jshint: {
-      all: ['js/global.js']
+      all: 'js/global.js',
     },
 
     uglify: {

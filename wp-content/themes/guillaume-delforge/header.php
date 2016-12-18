@@ -52,8 +52,13 @@
                     <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" class="img-responsiv" alt="Guillaume Delforge" />
                 <?php } ?>
             </div>
-            <nav class="xs-grid-12 m-grid-8">
+            <nav>
                 <?php wp_nav_menu( array( 'theme_location' => 'Top' ) ); ?>
             </nav>
+            <div class="btn-menu right s-show shadow-light border-radius-100">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
     </header>

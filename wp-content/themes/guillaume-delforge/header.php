@@ -19,10 +19,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Guillaume Delforge</title>
     <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/stylizer/stylizer.css" type="text/css">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/global.min.js"></script>
 
     <?php wp_head(); ?>
 </head>
 
 <body <?php body_class('columns-12'); ?>>
+
+    <?php if (is_home()) { ?>
+        <div id="particles-js">
+            <div class="head-particles text-center">
+                <span>GD</span>
+                <h1><?php bloginfo( 'name' ); ?></h1>
+                <p><?php bloginfo( 'description' ); ?></p>
+            </div>
+        </div>
+    <?php } ?>
+
+    <header class="shadow-light">
+        <div class="wrapper">
+            <div id="logo">
+                <?php if (!is_home()) { ?>
+                    <a href="<?php echo home_url(); ?>">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" class="img-responsiv" alt="Guillaume Delforge" />
+                    </a>
+                <?php } else { ?>
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" class="img-responsiv" alt="Guillaume Delforge" />
+                <?php } ?>
+            </div>
+            <nav class="xs-grid-12 m-grid-8">
+                <?php wp_nav_menu( array( 'theme_location' => 'Top' ) ); ?>
+            </nav>
+        </div>
+    </header>

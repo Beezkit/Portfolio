@@ -6,7 +6,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
     jshint: {
-      all: ['js/*.js']
+      all: ['js/global.js']
     },
 
     uglify: {
@@ -15,7 +15,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'dist/global-min.js': 'js/global.js'
+          'js/global.min.js': 'js/global.js'
         }
       }
     },
@@ -33,7 +33,7 @@ module.exports = function(grunt) {
 
     watch: {
       js: {
-        files: 'js/*.js',
+        files: 'js/global.js',
         tasks: ['jshint', 'uglify'],
         options: {
           spawn: false,
@@ -59,6 +59,6 @@ module.exports = function(grunt) {
   })
 
   // Définition des tâches Grunt
-  grunt.registerTask('default', ['jshint', 'uglify', 'sass', 'sprite']);
+  grunt.registerTask('default', ['jshint', 'sass', 'sprite', 'uglify']);
 
 }

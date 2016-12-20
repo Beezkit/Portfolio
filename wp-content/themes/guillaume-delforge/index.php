@@ -16,26 +16,26 @@
 
 get_header(); ?>
 
-	<?php // The Query
-	$the_query = new WP_Query( array( 'pagename' => 'a-propos' ) ); ?>
+		<div class="wrapper title-first">
+		<?php // The Query 
+		$the_query = new WP_Query( array( 'pagename' => 'a-propos' ) ); 
 
-	<?php if ( $the_query->have_posts() ) : ?>
+		if ( $the_query->have_posts() ) { ?>
+			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-	<!-- pagination here -->
+			<div class="xs-grid-12 a-propos shadow-light">
+				<div class="xs-grid-5">
+					<h2><?php the_title(); ?></h2>
+					<p><?php the_content(); ?></p>
+				</div>
+			</div>
+			<?php endwhile; ?>
 
-	<!-- the loop -->
-	<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-		<h2><?php the_title(); ?></h2>
-		<p><?php the_content(); ?></p>
-	<?php endwhile; ?>
-	<!-- end of the loop -->
+				<?php wp_reset_postdata(); ?>
 
-	<!-- pagination here -->
-
-	<?php wp_reset_postdata(); ?>
-
-<?php else : ?>
-	<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-<?php endif; ?>
+			<?php } ?>
+			<div class="clear"></div>
+		</div>
+	
 
 <?php get_footer(); ?>

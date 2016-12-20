@@ -111,6 +111,12 @@ header {
     }
 }
 
+.title-first {
+    .a-propos {
+        background: $black;
+    }
+}
+
 @media all and (min-width: 640px) {
     #particles-js {
         .head-particles {

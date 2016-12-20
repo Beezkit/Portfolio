@@ -8,11 +8,14 @@
 		if ( $the_query->have_posts() ) { ?>
 			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
-			<div class="xs-grid-12 a-propos shadow-light">
-				<div class="xs-grid-5">
+			<div class="xs-grid-10 xs-grid-offset-1 a-propos shadow-light article-thumbnail">
+				<div class="xs-grid-7 content-article text-center">
 					<h2><?php the_title(); ?></h2>
 					<p><?php the_content(); ?></p>
 				</div>
+                <div class="thumbnail shadow-light">
+                    <?php the_post_thumbnail(); ?>
+                </div>
 			</div>
 			<?php endwhile; ?>
 

@@ -118,7 +118,6 @@ header {
 
 .title-first {
     .a-propos {
-        margin-top: 120px;
         background: $black;
         h2 {
             color: $white;
@@ -130,9 +129,8 @@ header {
             font-size: 14px;
         }
         .thumbnail {
-            position: absolute;
-            right: 90px;
-            top: -110px;
+            margin: auto;
+            text-align: center;
         }
     }
 }
@@ -190,6 +188,31 @@ header {
                 li {
                     display: inline-block;
                 }
+            }
+        }
+    }
+}
+
+@media all and (min-width: 1200px) {
+    .title-first {
+        .a-propos {
+            margin-top: 50px;
+            .thumbnail {
+                position: absolute;
+                right: 20px;
+                top: -50px;
+            }
+        }
+    }
+}
+
+@media all and (min-width: 1400px) {
+    .title-first {
+        .a-propos {
+            .thumbnail {
+                position: absolute;
+                right: 50px;
+                top: -65px;
             }
         }
     }

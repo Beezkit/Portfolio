@@ -4,6 +4,10 @@
 add_theme_support( 'post-thumbnails' );
 the_post_thumbnail( 'full' );
 
+//empêche la conversion des certaines entités texte en entités HTML
+remove_filter( 'the_content', 'wpautop' );
+
+
  register_nav_menus( array(
      'Top' => 'Navigation principale'
  ) );

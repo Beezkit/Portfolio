@@ -116,12 +116,22 @@ header {
         background: $black;
     }
 }
+header.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+}
 
 .title-first {
     .a-propos {
         background: $black;
         h2 {
             color: $white;
+        }
+        .content-article {
+            padding: 20px;
         }
         .content {
             padding: 20px 0;
@@ -144,6 +154,47 @@ header {
 .title-second {
     .portfolio {
         margin-top: 140px;
+        .article-thumbnail {
+            position: relative;
+            overflow: hidden;
+            .thumbnail {
+                height: 260px;
+                overflow: hidden;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: $black-transparent;
+                }
+            }
+            .article-link {
+                position: relative;
+                padding: 10px 20px;
+                background: $white;
+                h3 {
+                    margin-bottom: 0;
+                }
+                .btn {
+                    padding: 12px;
+                    i {
+                        color: $white;
+                    }
+                }
+                .content-article {
+                    background: $white;
+                    a {
+                        display: inline-block;
+                        color: $white;
+                    }
+                }
+            }
+            .article-link.show {
+                top: -260px;
+            }
+        }
     }
 }
 

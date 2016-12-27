@@ -127,6 +127,7 @@ header.fixed {
 .title-first {
     .a-propos {
         background: $black;
+        padding-bottom: 20px;
         h2 {
             color: $white;
         }
@@ -171,7 +172,10 @@ header.fixed {
                 }
             }
             .article-link {
-                position: relative;
+                position: absolute;
+                bottom: -75%;
+                width: 100%;
+                height: 100%;
                 padding: 10px 20px;
                 background: $white;
                 h3 {
@@ -184,7 +188,7 @@ header.fixed {
                     }
                 }
                 .content-article {
-                    background: $white;
+                    position: absolute;
                     a {
                         display: inline-block;
                         color: $white;
@@ -192,7 +196,13 @@ header.fixed {
                 }
             }
             .article-link.show {
-                top: -260px;
+                position: absolute;
+                bottom: 0%;
+                .btn {
+                    i {
+                        transform: rotate(180deg);
+                    }
+                }
             }
         }
     }
@@ -260,6 +270,7 @@ header.fixed {
     .title-first {
         .a-propos {
             margin-top: 50px;
+            padding-bottom: 0;
             .thumbnail {
                 position: absolute;
                 right: 20px;

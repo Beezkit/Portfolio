@@ -42,7 +42,7 @@
 										<div class="thumbnail">
 											<?php the_post_thumbnail('full', array('class' => 'img-responsiv')); ?>
 										</div>
-										<div class="article-link">
+										<div class="article-link ease">
 											<h3 class="title-thumbnail left"><?php the_title(); ?></h3>
 											<a href="#" class="btn btn-up blue-light blue-light-hover shadow-light ease-in-out right border-radius-100" title="Voir le contenu"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
 											<div class="clear"></div>

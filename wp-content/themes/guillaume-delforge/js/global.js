@@ -12,8 +12,8 @@ $( document ).ready(function() {
         $('.btn-menu').removeClass('menu-responive');
     }
 
-    $('.article-link a').on('click', function(e) {
-        console.log($(this).parent());
+    $('.article-link > a').on('click', function(e) {
+        var heightThis = $(this).parent().closest('.article-thumbnail').outerHeight(true);
         if ($(this).parent().hasClass('show')) {
             $('.article-link').removeClass('show');
         } else {

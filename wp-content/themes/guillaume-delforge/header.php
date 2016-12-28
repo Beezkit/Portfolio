@@ -21,7 +21,7 @@
     <?php if (is_home()) { ?>
         <div id="particles-js">
             <div class="head-particles text-center">
-                <span>GD</span>
+                <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" class="img-responsiv" alt="Guillaume Delforge" />
                 <h1><?php bloginfo( 'name' ); ?></h1>
                 <p><?php bloginfo( 'description' ); ?></p>
             </div>

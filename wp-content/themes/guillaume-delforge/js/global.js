@@ -25,11 +25,17 @@ $( document ).ready(function() {
 
     $(window).on('scroll', function(){
         windowsTop = $(window).scrollTop();
+        skills = $('#competences').offset().top;
+
 
         if (windowsTop >= headerTop) {
             $('header').addClass('fixed');
         } else {
             $('header').removeClass('fixed');
+        }
+        console.log(skills);
+        if (windowsTop >= skills) {
+            console.log('coucou');
         }
     });
 

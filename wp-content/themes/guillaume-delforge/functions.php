@@ -31,3 +31,31 @@ function add_my_post_types_to_query( $query ) {
     $query->set( 'post_type', array( 'post', 'page', 'movie' ) );
   return $query;
 }
+
+// CUSTOM POST TYPE COMPETENCES
+register_post_type(
+   'Experiences',
+   array(
+        'label' => 'Mes Experiences',
+        'labels' => array(
+            'name' => 'Mes Experiences',
+            'singular_name' => 'Mes Experiences',
+            'all_items' => 'Toutes Mes Experiences',
+            'add_new_item' => 'Ajouter une Experience',
+            'edit_item' => 'Éditer l\'Experiences',
+            'new_item' => 'Nouvelle Experience',
+            'view_item' => 'Voir l\'Experiences',
+            'search_items' => 'Rechercher parmi les Experiences',
+            'not_found' => 'Pas d\'Experiences trouvée',
+            'not_found_in_trash'=> 'Pas d\'Experiences dans la corbeille'
+            ),
+        'public' => true,
+        'capability_type' => 'post',
+        'supports' => array(
+        	'title',
+        	'editor',
+            'thumbnail'
+        ),
+        'has_archive' => true
+    )
+);

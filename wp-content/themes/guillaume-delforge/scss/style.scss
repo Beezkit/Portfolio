@@ -238,16 +238,42 @@ header.fixed {
         .progress-bar {
             width: 100%;
             height: 15px;
-            margin: 10px auto;
+            margin: 20px auto;
             .bar {
+                width: 0;
                 height: 15px;
             }
-            .bar90 {
-                width: 90%;
-            }
-            .bar70 {
-                width: 70%;
-            }
+        }
+    }
+    .raw {
+        .list-skills {
+            margin: 20px auto;
+        }
+    }
+}
+
+.experciences {
+    padding-bottom: 20px;
+    h2 {
+        color: $white;
+    }
+    p {
+        color: $white;
+        .societe {
+            color: $bleu;
+            font-weight: 500;
+        }
+    }
+    background: $black;
+    .logo {
+    text-align: center;
+    margin-bottom: 20px;
+    }
+    .even, .odd {
+        padding: 20px 0;
+        a {
+            display: inline-block;
+            color: $white;
         }
     }
 }
@@ -276,6 +302,14 @@ header.fixed {
             p {
                 font-size: 30px;
             }
+        }
+    }
+    .experciences {
+        .even, .odd {
+            border-top: $border-red;
+        }
+        .even:first-child {
+            border-top: none;
         }
     }
 }
@@ -310,6 +344,31 @@ header.fixed {
     }
 }
 
+@media all and (min-width: 992px) {
+    .experciences {
+        .even, .odd {
+            margin-bottom: 0;
+            padding: 20px 0;
+            .logo {
+                margin-top: 10px;
+                margin-bottom: 0;
+            }
+            .link {
+                padding: 50px 0;
+                text-align: center;
+            }
+            .btn {
+                padding: 8px 10px;
+            }
+        }
+        .odd {
+            .logo, .link, .content {
+                float: right;
+            }
+        }
+    }
+}
+
 @media all and (min-width: 1200px) {
     .title-first {
         .a-propos {
@@ -319,6 +378,16 @@ header.fixed {
                 position: absolute;
                 right: 20px;
                 top: -30px;
+            }
+        }
+    }
+    .experciences {
+        .even, .odd {
+            .logo {
+                margin-top: 0;
+            }
+            .link {
+                padding: 40px 0;
             }
         }
     }

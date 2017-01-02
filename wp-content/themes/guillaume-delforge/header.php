@@ -25,6 +25,7 @@
                 <h1><?php bloginfo( 'name' ); ?></h1>
                 <p><?php bloginfo( 'description' ); ?></p>
             </div>
+            <div class="scrollBot"><a href="#aboutme"><i class="fa fa-angle-down" aria-hidden="true"></i></a></div>
         </div>
     <?php } ?>
 

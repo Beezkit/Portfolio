@@ -19,9 +19,9 @@ add_filter('excerpt_more', 'new_excerpt_more');
 remove_filter( 'the_content', 'wpautop' );
 
 
- register_nav_menus( array(
-     'Top' => 'Navigation principale'
- ) );
+register_nav_menus( array(
+ 'Top' => 'Navigation principale'
+) );
 
  // Show posts of 'post', 'page' and 'movie' post types on home page
 add_action( 'pre_get_posts', 'add_my_post_types_to_query' );

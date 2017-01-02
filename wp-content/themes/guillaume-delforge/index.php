@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 
 		<div class="wrapper">
-			<div class="title-first">
+			<div id="aboutme" class="title-first">
 			<?php // The Query
 			$the_query = new WP_Query( array( 'pagename' => 'a-propos' ) );
 
@@ -33,7 +33,7 @@
 
 			</div>
 
-			<div class="title-second">
+			<div id="portfolio" class="title-second">
 				<?php $the_query = new WP_Query( array('category_name'  => 'portfolio', 'post_per_page' => '6', 'order_by' => 'date'));
 				if ( $the_query->have_posts() ) { ?>
 					<div class="portfolio text-center">
@@ -65,7 +65,7 @@
 				<?php } ?>
 			</div>
 
-			<div id="competences" class="title-second">
+			<div id="skills" class="title-second">
 				<?php $the_query = new WP_Query( array('category_name'  => 'competences', 'orderby' => 'id', 'order' => 'asc'));
 				if ( $the_query->have_posts() ) { ?>
 					<div class="competences text-center">
@@ -80,7 +80,7 @@
 								</div>
 								<div class="clear"></div>
 								<div class="progress-bar shadow-light">
-									<div class="bar bar<?php echo get_field('pourcentage'); ?> blue-light"></div>
+									<div class="bar blue-light" data-width="<?php echo get_field('pourcentage'); ?>"></div>
 								</div>
 							</div>
 							<?php endwhile; ?>
@@ -94,7 +94,7 @@
 
 		</div>
 
-		<div class="experciences title-second">
+		<div id="exp" class="experciences title-second">
 			<div class="text-center">
 				<h2>Expériences Professionnelles</h2>
 			</div>

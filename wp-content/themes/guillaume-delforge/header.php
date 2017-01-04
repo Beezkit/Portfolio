@@ -18,17 +18,6 @@
 
 <body <?php body_class('columns-12'); ?>>
 
-    <?php if (is_home()) { ?>
-        <div id="particles-js">
-            <div class="head-particles text-center">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" class="img-responsiv" alt="Guillaume Delforge" />
-                <h1><?php bloginfo( 'name' ); ?></h1>
-                <p><?php bloginfo( 'description' ); ?></p>
-            </div>
-            <div class="scrollBot"><a href="#aboutme"><i class="fa fa-angle-down" aria-hidden="true"></i></a></div>
-        </div>
-    <?php } ?>
-
     <header class="shadow-light ease">
         <div class="wrapper">
             <div id="logo">
@@ -40,7 +29,7 @@
                     <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" class="img-responsiv" alt="Guillaume Delforge" />
                 <?php } ?>
             </div>
-            <nav>
+            <nav class="ease">
                 <?php wp_nav_menu( array( 'theme_location' => 'Top' ) ); ?>
             </nav>
             <div class="btn-menu right s-show shadow-light border-radius-100">
@@ -50,3 +39,14 @@
             </div>
         </div>
     </header>
+
+    <?php if (is_home()) { ?>
+        <div id="particles-js">
+            <div class="head-particles text-center">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" class="img-responsiv" alt="Guillaume Delforge" />
+                <h1><?php bloginfo( 'name' ); ?></h1>
+                <p><?php bloginfo( 'description' ); ?></p>
+            </div>
+            <div class="scrollBot"><a href="#aboutme"><i class="fa fa-angle-down" aria-hidden="true"></i></a></div>
+        </div>
+    <?php } ?>

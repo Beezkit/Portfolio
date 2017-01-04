@@ -80,7 +80,7 @@
 								</div>
 								<div class="clear"></div>
 								<div class="progress-bar shadow-light">
-									<div class="bar blue-light" data-width="<?php echo get_field('pourcentage'); ?>"></div>
+									<div class="bar blue-light ease-in-out bar<?php echo get_field('pourcentage'); ?>"></div>
 								</div>
 							</div>
 							<?php endwhile; ?>

@@ -15,7 +15,7 @@ h1 {
     font-weight: 300;
     font-family: 'Open Sans', sans-serif;
 }
-h2 {
+h2, .titre-h2 {
     font-size: 30px;
     font-weight: 600;
     font-family: 'Open Sans', sans-serif;
@@ -106,6 +106,9 @@ a {
 }
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 80px;
     border-bottom: $border-orange;
@@ -116,11 +119,9 @@ header {
         width: 70px;
         padding: 5px;
     }
-
     nav {
-        display: none;
         position: absolute;
-        top: 0;
+        top: -999px;
         right: 0;
         bottom: 0;
         left: 0;
@@ -128,6 +129,7 @@ header {
         height: 90%;
         margin: auto;
         background: $white;
+        z-index: -999;
         ul {
             height: 100%;
             li {
@@ -139,20 +141,17 @@ header {
             }
         }
     }
-
+    nav.activ {
+        position: fixed;
+        top: 0;
+        z-index: 0;
+    }
     .btn-menu {
-        position: static;
+        position: relative;
         float: right;
         margin-top: 15px;
         background: $black;
     }
-}
-header.fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 200;
 }
 
 .title-first {
@@ -229,6 +228,7 @@ header.fixed {
                 background: $white;
                 h3 {
                     margin-bottom: 0;
+                    font-size: 22px;
                 }
                 .btn {
                     padding: 12px;
@@ -281,6 +281,43 @@ header.fixed {
         .list-skills {
             margin: 20px auto;
         }
+        .list-skills.activ {
+            .progress-bar {
+                .bar10 {
+                    width: 10%;
+                }
+                .bar20 {
+                    width: 20%;
+                }
+                .bar30 {
+                    width: 30%;
+                }
+                .bar40 {
+                    width: 40%;
+                }
+                .bar50 {
+                    width: 50%;
+                }
+                .bar60 {
+                    width: 60%;
+                }
+                .bar70 {
+                    width: 70%;
+                }
+                .bar75 {
+                    width: 75%;
+                }
+                .bar80 {
+                    width: 80%;
+                }
+                .bar90 {
+                    width: 90%;
+                }
+                .bar100 {
+                    width: 100%;
+                }
+            }
+        }
     }
 }
 
@@ -322,8 +359,61 @@ header.fixed {
 }
 
 footer {
-    padding-bottom: 20px;
     border-top: $border-orange;
+    .footer-logo {
+        text-align: center;
+        a {
+            img {
+                width: 90px;
+            }
+        }
+    }
+    .follow {
+        ul {
+            li {
+                margin-bottom: 10px;
+                a {
+                    position: relative;
+                    width: 120px;
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: left;
+                    padding-left: 40px;
+                    color: $white;
+                    i {
+                        position: absolute;
+                        left: 0;
+                        width: 30px;
+                        height: 30px;
+                        line-height: 30px;
+                        text-align: center;
+                        background: $black;
+                        color: $white;
+                    }
+                }
+                a:hover, a:focus {
+                    width: 150px;
+                }
+            }
+        }
+    }
+    .contact {
+        a {
+            color: $white;
+        }
+    }
+    .mentions {
+        background: $black;
+        margin-top: 20px;
+        padding: 20px 0;
+        p {
+            margin-bottom: 0;
+            color: $white;
+            a {
+                color: $white;
+            }
+        }
+    }
 }
 
 @media all and (min-width: 640px) {
@@ -349,6 +439,17 @@ footer {
 
             p {
                 font-size: 30px;
+            }
+        }
+    }
+    .title-second {
+        .portfolio {
+            .article-thumbnail {
+                .article-link {
+                    h3 {
+                        font-size: 26px;
+                    }
+                }
             }
         }
     }

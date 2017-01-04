@@ -1,8 +1,8 @@
 $( document ).ready(function() {
+
     $('.list-skills', 'body').removeClass('activ');
     windowsWidth = $(window).width();
     windowsHeight = $( window ).height();
-    headerTop = $('header').offset().top;
 
     $('#particles-js').css('height', windowsHeight);
 
@@ -36,28 +36,21 @@ $( document ).ready(function() {
 
 	});
 
+    $('.btn-menu').on('click', function() {
+        if ($('nav').hasClass('activ')) {
+            $('nav, body').removeClass('activ');
+        } else {
+            $('nav, body').addClass('activ');
+        }
+    });
+
     $(window).on('scroll', function(){
         windowsTop = $(window).scrollTop();
         skills = $('#skills').offset().top;
 
-        if (windowsTop >= headerTop) {
-            $('header').addClass('fixed');
-        } else {
-            $('header').removeClass('fixed');
-        }
-
         if (windowsTop >= skills) {
             $('.list-skills', 'body').addClass('activ');
-            $('.list-skills.activ .progress-bar .bar').each(function(i,e){
-                var width = $(this).data('width');
-                $(this).animate({
-                    width: width+'%'
-                }, 1000);
-            });
         }
-
-
-
     });
 
 });

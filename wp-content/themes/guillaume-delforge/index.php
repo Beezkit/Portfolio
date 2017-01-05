@@ -57,9 +57,21 @@
 								</div>
 							</div>
 							<?php endwhile; ?>
+							<div class="clear"></div>
+							<?php
+							    // Get the ID of a given category
+							    $category_id = get_cat_ID( 'portfolio' );
+
+							    // Get the URL of this category
+							    $category_link = get_category_link( $category_id );
+							?>
+
+							<div class="text-center">
+								<a href="<?php echo esc_url( $category_link ); ?>" class="see-all btn btn-big btn-up blue-light blue-light-hover shadow-light ease-in-out" title="Voir tout les portfolio">Voir tout les projets</a>
+							</div>
 
 							<?php wp_reset_postdata(); ?>
-							<div class="clear"></div>
+
 						</div>
 					</div>
 				<?php } ?>

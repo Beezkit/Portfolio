@@ -32,6 +32,9 @@ a {
     height: 100%;
     background: $black-transparent;
 }
+.btn-big {
+    padding: 12px 16px;
+}
 
 #particles-js {
     width: 100%;
@@ -270,6 +273,11 @@ header {
                 }
             }
         }
+        .see-all {
+            margin-top: 20px;
+            display: inline-block;
+            color: $white;
+        }
     }
     .competences {
         .title {
@@ -427,6 +435,14 @@ footer {
                 color: $white;
             }
         }
+    }
+}
+
+.category {
+    h1 {
+        margin-top: 40px;
+        color: $black;
+        text-align: center;
     }
 }
 

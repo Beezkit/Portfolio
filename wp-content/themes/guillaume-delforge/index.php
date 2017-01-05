@@ -95,7 +95,7 @@
 		</div>
 
 		<div id="exp" class="experciences title-second">
-			<div class="text-center">
+			<div class="exp-pro text-center">
 				<h2>Expériences Professionnelles</h2>
 			</div>
 			<div class="wrapper">

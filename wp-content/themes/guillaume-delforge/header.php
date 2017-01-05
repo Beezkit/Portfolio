@@ -32,7 +32,7 @@
             <nav class="ease">
                 <?php wp_nav_menu( array( 'theme_location' => 'Top' ) ); ?>
             </nav>
-            <div class="btn-menu right s-show shadow-light border-radius-100">
+            <div class="btn-menu right s-show shadow-light">
                 <span></span>
                 <span></span>
                 <span></span>

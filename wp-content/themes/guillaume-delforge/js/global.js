@@ -1,5 +1,7 @@
 $( document ).ready(function() {
 
+    var menuOpen = false;
+
     $('.list-skills', 'body').removeClass('activ');
     windowsWidth = $(window).width();
     windowsHeight = $( window ).height();
@@ -23,6 +25,31 @@ $( document ).ready(function() {
         e.preventDefault();
     });
 
+    $('.btn-menu').on('click', function() {
+
+        if (menuOpen === false) {
+            $('nav').animate({
+                right: "0px"
+            }, function(){
+                $('.overlay').fadeIn('fast');
+            });
+
+            menuOpen = true;
+        } else if (menuOpen === true) {
+            $('nav').animate({
+                right: "-300px"
+            }, function(){
+                $('.overlay').fadeOut('fast');
+            });
+
+            menuOpen = false;
+        }
+    });
+
+    $('.overlay').on('click', function() {
+        $('.btn-menu').trigger('click');
+    });
+
     $('.menu-item a, .scrollBot a').on('click', function(e) { // Au clic sur un élément
 		var page = $(this).attr('href'); // Page cible
 		var speed = 1500; // Durée de l'animation (en ms)
@@ -31,18 +58,27 @@ $( document ).ready(function() {
             e.preventDefault();
             $('html, body').animate( {
                 scrollTop: $(page).offset().top
-            }, speed, 'swing' ); // Go
-        }
+            }, speed, 'swing', function(){
+                if (menuOpen === true) {
+                    $('nav').animate({
+                        right: "-300px"
+                    }, function(){
+                        $('.overlay').fadeOut('fast');
+                    });
 
+                    menuOpen = false;
+                }
+            } ); // Go
+            if (e.target.closest('.scrollBot')) {
+                console.log('coucou');
+                $('li.menu-item').removeClass('current-menu-item');
+                $('li.menu-item-65').addClass('current-menu-item');
+            } else {
+                $('li.menu-item').removeClass('current-menu-item');
+                $(this).closest('li').addClass('current-menu-item');
+            }
+        }
 	});
-
-    $('.btn-menu').on('click', function() {
-        if ($('nav').hasClass('activ')) {
-            $('nav, body').removeClass('activ');
-        } else {
-            $('nav, body').addClass('activ');
-        }
-    });
 
     $(window).on('scroll', function(){
         windowsTop = $(window).scrollTop();

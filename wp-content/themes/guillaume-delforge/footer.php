@@ -35,6 +35,7 @@
         </div>
     </div>
 </footer>
+<div class="overlay"></div>
 <script src="<?php echo get_template_directory_uri(); ?>/js/particle/particles.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/particle/app.js"></script>
 </body>

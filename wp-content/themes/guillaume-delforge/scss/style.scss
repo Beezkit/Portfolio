@@ -172,6 +172,19 @@ header {
         background: $orange;
         z-index: 99;
     }
+    .go-home {
+        width: 80px;
+        height: 79px;
+        margin: auto;
+        text-align: center;
+        a {
+            display: block;
+            padding: 24px 0;
+            font-size: 30px;
+            background: $orange;
+            color: $white;
+        }
+    }
 }
 
 .title-first {
@@ -443,6 +456,54 @@ footer {
         margin-top: 40px;
         color: $black;
         text-align: center;
+    }
+    .article-thumbnail {
+        .thumbnail {
+            height: 360px;
+            overflow: hidden;
+            a {
+                display: inline-block;
+                i {
+                    display: inline-block;
+                    position: absolute;
+                    width: 30px;
+                    height: 30px;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    margin: auto;
+                    font-size: 30px;
+                    color: $white;
+                    z-index: 1;
+                }
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: $black-transparent;
+            }
+        }
+        .content-article {
+            display: none;
+            p {
+                margin-bottom: 20px;
+            }
+            a {
+                color: $white;
+            }
+        }
+    }
+}
+
+.single {
+    .title-first {
+        padding-top: 130px;
+        margin-bottom: 20px;
     }
 }
 

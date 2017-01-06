@@ -29,6 +29,7 @@
                     <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" class="img-responsiv" alt="Guillaume Delforge" />
                 <?php } ?>
             </div>
+            <?php if (is_home()) { ?>
             <nav class="ease">
                 <?php wp_nav_menu( array( 'theme_location' => 'Top' ) ); ?>
             </nav>
@@ -37,6 +38,12 @@
                 <span></span>
                 <span></span>
             </div>
+            <?php }?>
+            <?php if (!is_home()) { ?>
+                <div class="go-home">
+                    <a href="<?php echo home_url(); ?>" title="retourner à l'accueil"><i class="fa fa-home" aria-hidden="true"></i></a>
+                </div>
+            <?php } ?>
         </div>
     </header>
 

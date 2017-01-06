@@ -70,7 +70,6 @@ $( document ).ready(function() {
                 }
             } ); // Go
             if (e.target.closest('.scrollBot')) {
-                console.log('coucou');
                 $('li.menu-item').removeClass('current-menu-item');
                 $('li.menu-item-65').addClass('current-menu-item');
             } else {
@@ -81,11 +80,13 @@ $( document ).ready(function() {
 	});
 
     $(window).on('scroll', function(){
-        windowsTop = $(window).scrollTop();
-        skills = $('#skills').offset().top;
+        if ($('body').hasClass('home')) {
+            windowsTop = $(window).scrollTop();
+            skills = $('#skills').offset().top;
 
-        if (windowsTop >= skills) {
-            $('.list-skills', 'body').addClass('activ');
+            if (windowsTop >= skills) {
+                $('.list-skills', 'body').addClass('activ');
+            }
         }
     });
 

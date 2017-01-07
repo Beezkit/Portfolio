@@ -1,7 +1,9 @@
 <?php get_header(); ?>
 <div class="wrapper">
     <div class="title-first">
-        <?php custom_breadcrumbs(); ?>
+        <div id="breadcrumb" class="shadow-light">
+            <?php custom_breadcrumbs(); ?>
+        </div>
         <h2><?php the_title(); ?></h2>
         <?php while ( have_posts() ) : the_post(); ?>
         <div class="raw">

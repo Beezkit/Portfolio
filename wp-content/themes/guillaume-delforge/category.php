@@ -2,7 +2,11 @@
 
 <div class="wrapper">
     <div class="title-first">
-        <?php custom_breadcrumbs(); ?>
+        <div class="xs-grid-12">
+            <div id="breadcrumb" class="shadow-light">
+                <?php custom_breadcrumbs(); ?>
+            </div>
+        </div>
         <h1><?php foreach ((get_the_category()) as $categroy) { echo $categroy->cat_name; }?></h1>
 
         <?php while ( have_posts() ) : the_post(); ?>

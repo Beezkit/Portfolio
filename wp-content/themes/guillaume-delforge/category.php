@@ -14,7 +14,10 @@
                 <div class="article-thumbnail text-justify ease">
                     <div class="thumbnail">
                         <?php the_post_thumbnail('full', array('class' => 'img-responsiv')); ?>
-                        <a href="<?php the_permalink(); ?>"><i class="fa fa-search" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="content-article text-center">
+                        <h2 class="ease"><?php the_title(); ?></h2>
+                        <a href="<?php the_permalink(); ?>" class="btn blue-light blue-light-hover ease">Voir le projet</a>
                     </div>
                 </div>
             </div>

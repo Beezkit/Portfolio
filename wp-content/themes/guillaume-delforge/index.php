@@ -128,7 +128,7 @@
 									<p><?php the_content(); ?></p>
 								</div>
 								<div class="xs-grid-12 s-grid-12 m-grid-2 link">
-									<a href="<?php the_permalink(); ?>" class="btn btn-up blue-light blue-light-hover shadow-light ease-in-out" title="Voir l'agence" target="_blank">Voir l'agence</a>
+									<a href="<?php the_field('liens_de_lagence'); ?>" class="btn btn-up blue-light blue-light-hover shadow-light ease-in-out" title="Voir l'agence" target="_blank">Voir l'agence</a>
 								</div>
 								<div class="clear"></div>
 							</div>

@@ -16,7 +16,7 @@ function new_excerpt_more( $more ) {
 add_filter('excerpt_more', 'new_excerpt_more');
 
 //empêche la conversion des certaines entités texte en entités HTML
-remove_filter( 'the_content', 'wpautop' );
+//remove_filter( 'the_content', 'wpautop' );
 
 
 register_nav_menus( array(
@@ -282,3 +282,30 @@ function custom_breadcrumbs() {
     }
 
 }
+
+function childtheme_custom_login() {
+ echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('stylesheet_directory') . '/css/admin.css" />';
+}
+
+add_action('login_head', 'childtheme_custom_login');
+
+function admin_css() {
+
+    $admin_handle = 'admin_css';
+    $admin_stylesheet = get_template_directory_uri() . '/css/admin.css';
+
+    wp_enqueue_style( $admin_handle, $admin_stylesheet );
+}
+add_action('admin_print_styles', 'admin_css', 11 );
+
+// Filtre qui permet de changer l'url du logo
+function custom_url_login()  {
+    return get_bloginfo( 'siteurl' ); // On retourne l'index du site
+}
+add_filter('login_headerurl', 'custom_url_login');
+
+// Filtre qui permet de changer l'attribut title du logo
+function custom_title_login($message) {
+    return get_bloginfo('description'); // On retourne la description du site
+}
+add_filter('login_headertitle', 'custom_title_login');

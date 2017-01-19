@@ -83,11 +83,62 @@ $( document ).ready(function() {
         if ($('body').hasClass('home')) {
             windowsTop = $(window).scrollTop();
             skills = $('#skills').offset().top;
+            aboutMe = $('#aboutme').offset().top - windowsTop;
+            portfolio = $('#portfolio').offset().top;
+            exp = $('#exp').offset().top;
+            position = $('#aboutMe, #skills').offset().top - windowsTop;
 
             if (windowsTop >= skills) {
                 $('.list-skills', 'body').addClass('activ');
             }
         }
+    });
+
+    $('#contact .form-group input, #contact .form-group textarea').on('click, focus', function(e) {
+        var parent = $(this).closest('.form-group');
+
+        if (parent.hasClass('activ')) {
+            $(parent).removeClass('activ');
+        } else {
+            $('#contact .form-group').removeClass('activ');
+            $(parent).addClass('activ');
+        }
+
+    });
+
+    $('#contact .form-group input, #contact .form-group textarea').on('blur', function() {
+        $('#contact .form-group').removeClass('activ');
+    });
+
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        nav: true,
+        navText: ['<i class="fa fa-chevron-left" aria-hidden="true"></i>','<i class="fa fa-chevron-right" aria-hidden="true"></i>'],
+        dots: false,
+        autoPlay: 1000, //Set AutoPlay to 1 seconds
+        items: 2,
+        mouseDrag: false,
+        margin: 20,
+        responsive : {
+            // breakpoint from 0 up
+            0 : {
+                items: 1
+            },
+            768 : {
+                items: 2
+            }
+        }
+    });
+
+    $('.owl-carousel .item img').on('click', function(){
+        $.fancybox({
+            href : $(this).attr('src'),
+            helpers : {
+                overlay: {
+                    css: {'background': 'rgba(0, 0, 0, 0.8)'} // or your preferred hex color value
+                } // overlay
+            }
+        });
     });
 
 });

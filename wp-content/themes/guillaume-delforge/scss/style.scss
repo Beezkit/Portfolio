@@ -23,6 +23,9 @@ h2, .titre-h2 {
 a {
     display: inline-block;
 }
+p {
+    font-weight: 300;
+}
 .overlay {
     display: none;
     position: fixed;
@@ -50,8 +53,8 @@ a {
         bottom: 0;
         left: 0;
         margin: auto;
-        width: 300px;
-        height: 500px;
+        width: 180px;
+        height: 385px;
 
         span {
             position: relative;
@@ -77,12 +80,12 @@ a {
         }
 
         h1 {
-            font-size: 30px;
+            font-size: 18px;
             margin-top: 60px;
         }
 
         p {
-            font-size: 25px;
+            font-size: 16px;
             color: $white;
             font-weight: 100;
         }
@@ -98,7 +101,7 @@ a {
         margin-right: auto;
         left: 0;
         right: 0;
-        bottom: 80px;
+        bottom: 40px;
         text-align: center;
         a {
             display: inline-block;
@@ -387,12 +390,6 @@ header {
     }
 }
 
-#contact {
-    h1 {
-        color: $black;
-    }
-}
-
 footer {
     border-top: $border-orange;
     .footer-logo {
@@ -516,8 +513,145 @@ footer {
         padding-top: 130px;
         margin-bottom: 20px;
     }
-    #breadcrumb {
+    .owl-carousel {
+        .item {
+            height: 300px;
+        }
+        .owl-nav {
+            .owl-next, .owl-prev {
+                background: transparent;
+                color: $orange;
+                font-size: 18px;
+                &:hover {
+                    background: $orange;
+                    color: $white;
+                }
+            }
+        }
+    }
+    .fancybox-close {
+        background-image: none;
+        background: $orange;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 36px;
+        &:after {
+            content: '\f00d';
+            display: inline-block;
+            width: 13px;
+            height: 16px;
+            margin: auto;
+            color: $white;
+            font: normal normal normal 18px/1 FontAwesome;
+        }
+    }
+    .fancybox-overlay {
+        background: none;
+    }
+}
 
+#contact {
+    margin-bottom: 20px;
+    h1 {
+        color: $black;
+    }
+    form {
+        .form-group {
+            padding: 20px;
+            text-align: center;
+            label {
+                display: block;
+                margin-bottom: 10px;
+                text-align: center;
+                font-weight: 600;
+            }
+            span {
+                input, textarea {
+                    max-width: 100%;
+                    width: 320px;
+                    padding-left: 15px;
+                    border: $border-black;
+                    border-top: none;
+                    outline: none;
+                    &:hover {
+                        border-color: $orange;
+                    }
+                    &:focus {
+                        border-color: $orange;
+                    }
+                    &:active {
+                        border-color: $orange;
+                    }
+                }
+                textarea {
+                    resize: none;
+                    &:hover {
+                        border-color: $orange;
+                    }
+                    &:focus {
+                        border-color: $orange;
+                    }
+                    &:active {
+                        border-color: $orange;
+                    }
+                }
+            }
+        }
+        .activ {
+            label {
+                color: $orange;
+            }
+        }
+        .submit {
+            input {
+                border: none;
+                color: $white;
+            }
+        }
+    }
+}
+
+@media all and (min-width: 360px) {
+    #particles-js {
+        .head-particles {
+            width: 210px;
+            h1 {
+                font-size: 21px;
+            }
+            p {
+                font-size: 19px;
+            }
+        }
+    }
+}
+
+@media all and (min-width: 375px) {
+    #particles-js {
+        .head-particles {
+            width: 225px;
+            height: 395px;
+            h1 {
+                font-size: 23px;
+            }
+            p {
+                font-size: 21px;
+            }
+        }
+    }
+}
+
+@media all and (min-width: 412px) {
+    #particles-js {
+        .head-particles {
+            width: 285px;
+            height: 470px;
+            h1 {
+                font-size: 29px;
+            }
+            p {
+                font-size: 24px;
+            }
+        }
     }
 }
 
@@ -625,6 +759,33 @@ footer {
     .exp-pro {
         margin-top: 80px;
     }
+    #contact {
+        margin-top: 40px;
+        form {
+            width: 80%;
+            margin: auto;
+        }
+    }
+    .single {
+        .owl-carousel {
+            .item {
+                height: 200px;
+            }
+            .owl-nav {
+                position: absolute;
+                width: 100%;
+                top: 40%;
+                .owl-prev {
+                    position: absolute;
+                    left: -50px;
+                }
+                .owl-next {
+                    position: absolute;
+                    right: -50px;
+                }
+            }
+        }
+    }
 }
 
 @media all and (min-width: 992px) {
@@ -653,6 +814,13 @@ footer {
     header {
         nav {
             padding-left: 140px
+        }
+    }
+    .single {
+        .owl-carousel {
+            .item {
+                height: 250px;
+            }
         }
     }
 }

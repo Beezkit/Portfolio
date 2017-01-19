@@ -26,7 +26,8 @@ module.exports = function(grunt) {
           style: 'compressed'
         },
         files: {                         // Dictionary of files
-          'style.css': 'scss/style.scss'       // 'destination': 'source'
+          'style.css': 'scss/style.scss' ,
+          'css/admin.css' : 'scss/admin.scss'      // 'destination': 'source'
         }
       }
     },

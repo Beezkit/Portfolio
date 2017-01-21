@@ -10,10 +10,10 @@
 				<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
 				<div class="xs-grid-12 l-grid-10 l-grid-offset-1 a-propos shadow-light">
-					<div class="xs-grid-12 l-grid-7 content-article text-center">
+					<div class="xs-grid-12 l-grid-7 content-article text-justify">
 						<h2><?php the_title(); ?></h2>
 						<div class="content">
-							<p><?php the_content(); ?></p>
+							<?php the_content(); ?>
 						</div>
 						<div class="social text-right">
 							<a href="<?php echo get_field('Github'); ?>" class="border-radius-100 btn-up shadow-light ease" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
@@ -125,7 +125,7 @@
 								</div>
 								<div class="xs-grid-12 s-grid-9 m-grid-8 content text-justify">
 									<p><span class="societe"><?php the_title(); ?></span><span class="date"> du <?php the_field('date_debut'); ?> <?php the_field('date_de_fin'); ?></span></p>
-									<p><?php the_content(); ?></p>
+									<?php the_content(); ?>
 								</div>
 								<div class="xs-grid-12 s-grid-12 m-grid-2 link">
 									<a href="<?php the_field('liens_de_lagence'); ?>" class="btn btn-up blue-light blue-light-hover shadow-light ease-in-out" title="Voir l'agence" target="_blank">Voir l'agence</a>

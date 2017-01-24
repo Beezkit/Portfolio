@@ -632,6 +632,9 @@ footer {
             input {
                 border: none;
                 color: $white;
+                border-radius: 0px;
+                -moz-border-radius: 0px;
+                -webkit-border-radius: 0px;
             }
         }
     }

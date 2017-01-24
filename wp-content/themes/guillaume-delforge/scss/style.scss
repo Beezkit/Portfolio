@@ -596,6 +596,9 @@ footer {
                     border: $border-black;
                     border-top: none;
                     outline: none;
+                    border-radius: 0px;
+                    -moz-border-radius: 0px;
+                    -webkit-border-radius: 0px;
                     &:hover {
                         border-color: $orange;
                     }

@@ -141,4 +141,8 @@ $( document ).ready(function() {
         });
     });
 
+    $('.category .article-thumbnail').on('click', function(){
+        $(this).trigger('hover');
+    });
+
 });

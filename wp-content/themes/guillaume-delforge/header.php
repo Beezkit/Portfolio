@@ -13,6 +13,7 @@
     <meta name="copyright" content="Copyright (c)2016 - 2017 DELFORGE Guillaume. Tout droit reservé." />
     <meta name="description" content="Portfolio de DELFORGE Guillaume, Intégrateur Web Lille. Création de site Wordpress, prestashop, utilisation de framework tel que : Bootstrap ou Stylizer." />
     <meta name="keywords" content="Delforge guillaume, intégrateur web lille, intégrateur web, intégrateur, developpeur front end" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">

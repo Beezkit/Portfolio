@@ -23,7 +23,8 @@ module.exports = function(grunt) {
     sass: {                              // Task
       dist: {                            // Target
         options: {                       // Target options
-          style: 'compressed'
+          style: 'compressed',
+          sourcemap: 'none'
         },
         files: {                         // Dictionary of files
           'style.css': 'scss/style.scss' ,

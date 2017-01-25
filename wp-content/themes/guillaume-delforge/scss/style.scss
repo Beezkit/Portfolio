@@ -8,7 +8,6 @@ html, body {
 body {
     font-family: 'Lato', sans-serif;
 }
-
 h1 {
     color: $white;
     font-size: 60px;
@@ -54,7 +53,7 @@ p {
         left: 0;
         margin: auto;
         width: 180px;
-        height: 345px;
+        height: 305px;
 
         span {
             position: relative;
@@ -81,7 +80,7 @@ p {
 
         h1 {
             font-size: 18px;
-            margin-top: 60px;
+            margin-top: 30px;
         }
 
         p {
@@ -749,6 +748,7 @@ footer {
 
             h1 {
                 font-size: 60px;
+                margin-top: 60px;
             }
 
             p {

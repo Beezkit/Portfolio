@@ -54,10 +54,14 @@
                 <span></span>
                 <span></span>
             </div>
-            <?php }?>
-            <?php if (!is_home()) { ?>
-                <div class="go-home">
-                    <a href="<?php echo home_url(); ?>" title="retourner à l'accueil"><i class="fa fa-home" aria-hidden="true"></i></a>
+            <?php } else { ?>
+                <nav class="ease">
+                    <?php wp_nav_menu( array( 'theme_location' => 'Second' ) ); ?>
+                </nav>
+                <div class="btn-menu right s-show shadow-light">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             <?php } ?>
         </div>

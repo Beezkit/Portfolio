@@ -9,17 +9,10 @@
             </div>
             <div class="menu-footer xs-grid-4 m-grid-3 m-grid-offset-1">
                 <p class="titre-h2">Menu</p>
-                <?php
-                    // Get the URL of this category
-                    $category_link = get_page_link('contact');
-                ?>
                 <?php if (is_home()) { ?>
                     <?php wp_nav_menu( array( 'theme_location' => 'Top' ) ); ?>
                 <?php } else { ?>
-                    <ul>
-                        <li><a href="<?php echo home_url(); ?>">Accueil</a></li>
-                        <li><a href="<?php echo $category_link; ?>">Contact</a></li>
-                    </ul>
+                    <?php wp_nav_menu( array( 'theme_location' => 'Second' ) ); ?>
                 <?php } ?>
             </div>
             <div class="follow xs-grid-4 m-grid-3">
@@ -35,7 +28,7 @@
             </div>
             <div class="contact xs-grid-4 m-grid-3">
                 <p class="titre-h2">Contact</p>
-                <a href="<?php echo $category_link; ?>" class="btn btn-up blue-light blue-light-hover shadow-light ease-in-out">Contactez-moi</a>
+                <a href="<?php echo home_url(); ?>/contact" class="btn btn-up blue-light blue-light-hover shadow-light ease-in-out">Contactez-moi</a>
             </div>
             <div class="clear"></div>
         </div>

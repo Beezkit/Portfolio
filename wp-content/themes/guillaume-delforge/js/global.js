@@ -2,6 +2,7 @@ $( document ).ready(function() {
 
     var menuOpen = false;
 
+
     $('.list-skills', 'body').removeClass('activ');
     windowsWidth = $(window).width();
     windowsHeight = $( window ).height();
@@ -54,30 +55,43 @@ $( document ).ready(function() {
 		var page = $(this).attr('href'); // Page cible
 		var speed = 1500; // Durée de l'animation (en ms)
         var match = page.match("\#(.+)");
-        if (page.match("\#(.+)")) {
-            e.preventDefault();
-            $('html, body').animate( {
-                scrollTop: $(page).offset().top
-            }, speed, 'swing', function(){
-                if (menuOpen === true) {
-                    $('nav').animate({
-                        right: "-300px"
-                    }, function(){
-                        $('.overlay').fadeOut('fast');
-                    });
+        if ($('body').hasClass('home')) {
+            if (page.match("\#(.+)")) {
+                e.preventDefault();
+                $('html, body').animate( {
+                    scrollTop: $(page).offset().top
+                }, speed, 'swing', function(){
+                    if (menuOpen === true) {
+                        $('nav').animate({
+                            right: "-300px"
+                        }, function(){
+                            $('.overlay').fadeOut('fast');
+                        });
 
-                    menuOpen = false;
+                        menuOpen = false;
+                    }
+                } ); // Go
+                if (e.target.closest('.scrollBot')) {
+                    $('li.menu-item').removeClass('current-menu-item');
+                    $('li.menu-item-65').addClass('current-menu-item');
+                } else {
+                    $('li.menu-item').removeClass('current-menu-item');
+                    $(this).closest('li').addClass('current-menu-item');
                 }
-            } ); // Go
-            if (e.target.closest('.scrollBot')) {
-                $('li.menu-item').removeClass('current-menu-item');
-                $('li.menu-item-65').addClass('current-menu-item');
-            } else {
-                $('li.menu-item').removeClass('current-menu-item');
-                $(this).closest('li').addClass('current-menu-item');
             }
         }
+
 	});
+
+    var url = window.location.href;
+    if (url.match("\#(.+)") !== null) {
+        var link = url.match("\#(.+)")[0];
+        $('nav .menu-item a').each(function(e,v){
+            if ($(v).attr('href') == link) {
+                $(this).trigger('click');
+            }
+        });
+    }
 
     $(window).on('scroll', function(){
         if ($('body').hasClass('home')) {

@@ -20,7 +20,8 @@ add_filter('excerpt_more', 'new_excerpt_more');
 
 
 register_nav_menus( array(
- 'Top' => 'Navigation principale'
+ 'Top' => 'Navigation principale',
+ 'Second' => 'Navigation Secondaire'
 ) );
 
  // Show posts of 'post', 'page' and 'movie' post types on home page

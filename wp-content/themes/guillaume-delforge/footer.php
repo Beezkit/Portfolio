@@ -42,5 +42,9 @@
 <div class="overlay"></div>
 <script src="<?php echo get_template_directory_uri(); ?>/js/particle/particles.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/particle/app.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/owl/owl.carousel.min.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/fancybox/jquery.fancybox.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/global.min.js"></script>
 </body>
 </html>

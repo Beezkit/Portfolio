@@ -24,10 +24,6 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fancybox/jquery.fancybox.css" type="text/css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/stylizer/stylizer.min.css" type="text/css">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/owl/owl.carousel.min.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/fancybox/jquery.fancybox.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/js/global.min.js"></script>
 
     <?php wp_head(); ?>
 </head>

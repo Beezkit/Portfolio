@@ -71,8 +71,8 @@
         <div id="particles-js">
             <div class="head-particles text-center">
                 <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" class="img-responsiv" alt="Guillaume Delforge" />
-                <h1><?php bloginfo( 'name' ); ?></h1>
-                <p><?php bloginfo( 'description' ); ?></p>
+                <h1><?php bloginfo( 'name' ); ?>
+                <span><?php bloginfo( 'description' ); ?></span></h1>
             </div>
             <div class="scrollBot"><a href="#aboutme"><i class="fa fa-angle-down" aria-hidden="true"></i></a></div>
         </div>

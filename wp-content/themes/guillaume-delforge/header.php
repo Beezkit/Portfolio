@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?> class="no-js no-svg">
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
-    <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/favicon.png" />
+    <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/images/favicon.png" />
     <link rel="canonical" href="http://www.guillaume-delforge.fr" />
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <?php if (is_home()) { ?>

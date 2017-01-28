@@ -61,6 +61,53 @@ register_post_type(
     )
 );
 
+// CUSTOM POST TYPE MARIAGES
+register_post_type(
+   'blog',
+   array(
+        'label' => 'Mon Blog',
+        'labels' => array(
+            'name' => 'Blog',
+            'singular_name' => 'Mes articles de blog',
+            'all_items' => 'Tout Mes articles de blog',
+            'add_new_item' => 'Ajouter un article',
+            'edit_item' => 'Éditer l\'article',
+            'new_item' => 'Nouvel article',
+            'view_item' => 'Voir l\'article',
+            'search_items' => 'Rechercher parmi les articles',
+            'not_found' => 'Pas d\'article',
+            'not_found_in_trash'=> 'Pas d\'article dans le blog'
+            ),
+        'public' => true,
+        'capability_type' => 'post',
+        'supports' => array(
+            'title',
+            'editor',
+            'thumbnail'
+        ),
+        'has_archive' => true
+    )
+);
+register_taxonomy(
+        'catégories',
+        'blog',
+        array(
+            'label' => 'Catégories',
+            'labels' => array(
+            'name' => 'Catégories',
+            'singular_name' => 'Catégories',
+            'all_items' => 'Toutes les catégories',
+            'edit_item' => 'Éditer une catégories',
+            'view_item' => 'Voir la catégories',
+            'update_item' => 'Mettre à jour la catégories',
+            'add_new_item' => 'Ajouter une catégories',
+            'new_item_name' => 'Nouvel catégories',
+            'search_items' => 'Rechercher parmi les catégories',
+            'popular_items' => 'catégories les plus utilisés'   ),
+            'hierarchical' => true   )
+    );
+    register_taxonomy_for_object_type( 'catégorie', 'blog' );
+
 // Breadcrumbs
 function custom_breadcrumbs() {
 

@@ -517,6 +517,9 @@ footer {
     .title-first {
         padding-top: 130px;
         margin-bottom: 20px;
+        h1 {
+            color: $black;
+        }
         .btn {
             color: $white;
         }

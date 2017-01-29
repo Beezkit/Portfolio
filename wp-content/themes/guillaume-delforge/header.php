@@ -8,13 +8,11 @@
     <?php if (is_home()) { ?>
         <title>Accueil | Guillaume Delforge Intégrateur Web Lille</title>
     <?php } else { ?>
-        <title><?php wp_title(); ?> | Guillaume Delforge Intégrateur Web Lille</title>
+        <title><?php wp_title(); ?></title>
     <?php } ?>
     <meta http-equiv="content-language" content="fr-FR" />
     <meta name="author" content="DELFORGE Guillaume" />
     <meta name="copyright" content="Copyright (c)2016 - 2017 DELFORGE Guillaume. Tout droit reservé." />
-    <meta name="description" content="Portfolio de DELFORGE Guillaume, Intégrateur Web Lille. Création de site Wordpress, prestashop, utilisation de framework tel que : Bootstrap ou Stylizer." />
-    <meta name="keywords" content="Delforge guillaume, intégrateur web lille, intégrateur web, intégrateur, developpeur front end" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <meta name="google-site-verification" content="FRJjA8ufTtN2Fvg0JkDb3-DXvAhF4hDDlJeeB2MpgbA" />
     <link rel="profile" href="http://gmpg.org/xfn/11">

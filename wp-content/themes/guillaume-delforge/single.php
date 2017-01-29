@@ -4,7 +4,7 @@
         <div id="breadcrumb" class="shadow-light">
             <?php custom_breadcrumbs(); ?>
         </div>
-        <h2><?php the_title(); ?></h2>
+        <h1><?php the_title(); ?></h1>
         <?php while ( have_posts() ) : the_post(); ?>
         <div class="raw">
             <div class="xs-grid-12 s-grid-6">

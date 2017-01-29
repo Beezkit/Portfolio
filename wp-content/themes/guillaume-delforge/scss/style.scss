@@ -631,6 +631,12 @@ footer {
     }
 }
 
+#blog {
+    h1 {
+        color: $black;
+    }
+}
+
 @media all and (min-width: 640px) {
     #particles-js {
         .head-particles {

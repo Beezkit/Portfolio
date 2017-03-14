@@ -14,6 +14,8 @@
     <meta name="author" content="DELFORGE Guillaume" />
     <meta name="copyright" content="Copyright (c)2016 - 2017 DELFORGE Guillaume. Tout droit reservé." />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="description" content="<?php bloginfo('description'); ?>" />
+    <meta name="keywords" content="Intégrateur web lille, intégrateur web, intégrateur wordpress, intégrateur prestashop, developpeur front end" />
     <meta name="google-site-verification" content="FRJjA8ufTtN2Fvg0JkDb3-DXvAhF4hDDlJeeB2MpgbA" />
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
